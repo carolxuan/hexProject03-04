@@ -1,0 +1,289 @@
+body {
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.j-content {
+  justify-content: space-between;
+}
+.a-center {
+  align-items: center;
+}
+.give-h-100 {
+  height: 100%;
+}
+// font
+.title {
+  font-size: 48px;
+  text-align: center;
+  line-height: 1.5;
+  color: $red-color;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+// header
+.header {
+  background: $primary-color;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 108px;
+    padding: 0 88px;
+  }
+}
+.menu {
+  display: flex;
+  li {
+    a {
+      color: $white-color;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 0 32px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    li {
+      a {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+.ham-icon {
+  position: absolute;
+  left: 13px;
+  color: #ffffff;
+}
+
+// footer
+.footer {
+  background: $primary-color;
+  color: $white-color;
+}
+.footer-info {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+.footer-menu {
+  a:first-child {
+    padding-left: 0;
+  }
+  a {
+    color: $white-color;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 24px;
+  }
+}
+.footer-icon {
+  a {
+    padding: 0 16px;
+  }
+}
+.footer-link {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 24px;
+  li:first-child {
+    margin-bottom: 16px;
+  }
+  a {
+    color: $white-color;
+    font-size: 36px;
+  }
+  img {
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+}
+.footer-txt {
+  padding: 24px 0 30px 0;
+}
+.footer-logo {
+  img {
+    margin-right: 38px;
+  }
+}
+.copy {
+  li:last-child {
+    padding-right: 0;
+  }
+  li {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 31px;
+    a {
+      font-size: 14px;
+      line-height: 21px;
+      color: $white-color;
+    }
+  }
+}
+
+// media
+@media (min-width: 768px) {
+  .ham-icon {
+    display: none;
+  }
+  .last-logo {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .ham-icon {
+    display: block;
+  }
+  .header {
+    .navbar {
+      padding: 40px;
+      height: 50px;
+    }
+  }
+  .menu {
+    a {
+      padding: 0 20px;
+    }
+  }
+  .footer-icon {
+    img {
+      width: 24px;
+    }
+  }
+  .footer-link {
+    img {
+      width: 20px;
+    }
+  }
+  .footer-link {
+    a {
+      font-size: 16px;
+    }
+  }
+  .footer-logo {
+    img {
+      width: 46px;
+    }
+  }
+  .copy {
+    li {
+      padding: 0 12px;
+    }
+  }
+  .header {
+    position: relative;
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+    img {
+      width: 48px;
+    }
+  }
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0px;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 120;
+    display: block;
+    text-align: center;
+    li {
+      a {
+        display: block;
+        background: #aa0601;
+        color: #ffffff;
+        border-top: 1px solid #ffffff;
+        padding: 16px 0;
+        text-decoration: none;
+      }
+    }
+  }
+  .menu.active {
+    max-height: 250px;
+  }
+  .menu li .menu li a:hover {
+    background: #8f0400;
+  }
+  .footer-menu {
+    display: none;
+  }
+  .footer-phone {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding-top: 24px;
+  }
+  .footer-icon {
+    a {
+      padding: 0 12px;
+    }
+  }
+  .footer-info {
+    padding: 0;
+  }
+  .footer-link {
+    border-bottom: none;
+  }
+  .footer-txt {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .copy {
+    display: block;
+    li {
+      padding: 0;
+    }
+  }
+  .last-logo {
+    display: block;
+    position: absolute;
+    right: 12px;
+    bottom: 20px;
+    width: 46px;
+  }
+  .footer-logo {
+    li:first-child {
+      display: none;
+    }
+  }
+  .footer-logo li {
+    padding-bottom: 8px;
+  }
+}
